@@ -553,41 +553,65 @@ object JudgeTrendUtils {
         var deadX = 0
         var dateTime = "2020-01-01"
 
-        if (qualityStocks[0].macd > 0 && qualityStocks[1].macd < 0)
-//            if (qualityStocks[0].dif < 0 && qualityStocks[0].dea < 0)
-                if (qualityStocks[0].j >= qualityStocks[0].k && qualityStocks[0].k >= qualityStocks[0].d)
-                    if (qualityStocks[1].d >= qualityStocks[1].k && qualityStocks[1].k >= qualityStocks[1].j)
-                        if(qualityStocks[0].rsi < 20 || (qualityStocks[0].rsi > 50 && qualityStocks[0].rsi < 80))
-                            if (qualityStocks[0].rsi > qualityStocks[1].rsi)
-                                return true
-
-        if (qualityStocks[0].macd > qualityStocks[1].macd && qualityStocks[1].macd < qualityStocks[2].macd
-                && qualityStocks[1].rsi < 20){
-            return true
+        if (qualityStocks[0].macd > 0 && qualityStocks[1].macd < 0) {
+            goldDif = qualityStocks[0].dif
+            goldPrice = qualityStocks[0].nowPrice!!.toFloat()
+            dateTime = qualityStocks[0].dateTime!!
+            for (index in 1 until qualityStocks.size - 1) {
+                if (qualityStocks[index].macd < 0 && qualityStocks[index + 1].macd > 0 && deadX == 0) {
+                    deadX = 1
+                }else if (deadX == 1 && goldX == 0) {
+                    if (qualityStocks[0].macd > 0 && qualityStocks[0].macd < 0){
+                        goldX = 1
+                    }
+                }else if (goldX == 1){
+                    if (qualityStocks[index].macd > qualityStocks[index + 1].macd &&
+                            qualityStocks[index + 1].macd < qualityStocks[index + 2].macd){
+                        if (goldPrice < qualityStocks[index].nowPrice!!.toFloat() &&
+                                goldDif > qualityStocks[index].dif) {
+                            println("------------------>Gold X Code" + qualityStocks[index].stockCode + "------Date : $dateTime")
+                            return true
+                        }
+                    }
+                }
+            }
         }
 
-        var wrStatus = 0
+//        if (qualityStocks[0].macd > 0 && qualityStocks[1].macd < 0)
+////            if (qualityStocks[0].dif < 0 && qualityStocks[0].dea < 0)
+//                if (qualityStocks[0].j >= qualityStocks[0].k && qualityStocks[0].k >= qualityStocks[0].d)
+//                    if (qualityStocks[1].d >= qualityStocks[1].k && qualityStocks[1].k >= qualityStocks[1].j)
+//                        if(qualityStocks[0].rsi < 20 || (qualityStocks[0].rsi > 50 && qualityStocks[0].rsi < 80))
+//                            if (qualityStocks[0].rsi > qualityStocks[1].rsi)
+//                                return true
 
-        if (abs(qualityStocks[0].r) > 90)
-            wrStatus += 1
-        if (abs(qualityStocks[1].r) > 90)
-            wrStatus += 1
-        if (abs(qualityStocks[2].r) > 90)
-            wrStatus += 1
-        if (abs(qualityStocks[3].r) > 90)
-            wrStatus += 1
-        if (abs(qualityStocks[4].r) > 90)
-            wrStatus += 1
-        if (abs(qualityStocks[5].r) > 90)
-            wrStatus += 1
-        if (abs(qualityStocks[6].r) > 90)
-            wrStatus += 1
-
-        if (abs(qualityStocks[0].r) > 90 && wrStatus > 3)
-            return true
-
-        if (abs(qualityStocks[0].r) < 80 && abs(qualityStocks[1].r) > 80)
-            return true
+//        if (qualityStocks[0].macd > qualityStocks[1].macd && qualityStocks[1].macd < qualityStocks[2].macd
+//                && qualityStocks[1].rsi < 20){
+//            return true
+//        }
+//
+//        var wrStatus = 0
+//
+//        if (abs(qualityStocks[0].r) > 90)
+//            wrStatus += 1
+//        if (abs(qualityStocks[1].r) > 90)
+//            wrStatus += 1
+//        if (abs(qualityStocks[2].r) > 90)
+//            wrStatus += 1
+//        if (abs(qualityStocks[3].r) > 90)
+//            wrStatus += 1
+//        if (abs(qualityStocks[4].r) > 90)
+//            wrStatus += 1
+//        if (abs(qualityStocks[5].r) > 90)
+//            wrStatus += 1
+//        if (abs(qualityStocks[6].r) > 90)
+//            wrStatus += 1
+//
+//        if (abs(qualityStocks[0].r) > 90 && wrStatus > 3)
+//            return true
+//
+//        if (abs(qualityStocks[0].r) < 80 && abs(qualityStocks[1].r) > 80)
+//            return true
 
 //        for (index in qualityStocks.indices){
 //            if (qualityStocks[index].dif > qualityStocks[index].dea)

@@ -79,7 +79,7 @@ class HighQualityStockViewModel : BaseViewModel() {
             .doOnNext {
                 BaseApplication.instance?.stocks?.forEach {
                     println("------------------>LocalPage : $localPage")
-//                    if (localPage < 100){
+//                    if (localPage < 1000){
                         var filterStatus = true
                         val prefixCode = it.code!!.substring(0, 3)
                         localPage += 1
