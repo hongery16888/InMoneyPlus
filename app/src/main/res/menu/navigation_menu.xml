@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/stock"
+        android:icon="@drawable/ic_stock"
+        android:title="Stock"
+        app:cnb_iconColor="@color/home"/>
+
+    <item
+        android:id="@+id/filter"
+        android:icon="@drawable/ic_filter"
+        android:title="Filter"
+        app:cnb_iconColor="@color/find" />
+
+    <item
+        android:id="@+id/money"
+        android:icon="@drawable/ic_money"
+        android:title="Money"
+        app:cnb_iconColor="@color/review"/>
+
+    <item
+        android:id="@+id/target"
+        android:icon="@drawable/ic_target"
+        android:title="Target"
+        app:cnb_iconColor="@color/settings" />
+
+</menu>

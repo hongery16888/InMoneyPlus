@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.magic.inmoney.viewmodel.update.UpdateViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        android:keepScreenOn="true"
+        tools:context="com.magic.upcoming.games.fragment.GameMainFragment">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_below="@id/title"
+            android:layout_marginTop="@dimen/dp_50"
+            android:layout_marginStart="@dimen/dp_100"
+            android:layout_marginEnd="@dimen/dp_100"
+            android:gravity="center_vertical|end"
+            android:text="@string/sh_updating" />
+
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+            android:id="@+id/sh_update"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_below="@id/title"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginStart="@dimen/dp_100"
+            android:layout_marginEnd="@dimen/dp_100"
+            android:background="@drawable/shape_update"
+            android:gravity="center"
+            android:text="@string/update_sh_stock"
+            app:spinning_bar_color="#F00"
+            app:spinning_bar_padding="6dp"
+            app:spinning_bar_width="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_below="@id/sh_update"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginStart="@dimen/dp_100"
+            android:layout_marginEnd="@dimen/dp_100"
+            android:gravity="center_vertical|end"
+            android:text="@string/sz_updating" />
+
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+            android:id="@+id/sz_update"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_below="@id/sh_update"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginStart="@dimen/dp_100"
+            android:layout_marginEnd="@dimen/dp_100"
+            android:background="@drawable/shape_update"
+            android:gravity="center"
+            android:text="@string/update_sz_stock"
+            app:spinning_bar_color="#F00"
+            app:spinning_bar_padding="6dp"
+            app:spinning_bar_width="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_below="@id/sz_update"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginStart="@dimen/dp_100"
+            android:layout_marginEnd="@dimen/dp_100"
+            android:gravity="center_vertical|end"
+            android:text="@string/updating_stock_info" />
+
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+            android:id="@+id/info_update"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_below="@id/sz_update"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginStart="@dimen/dp_100"
+            android:layout_marginEnd="@dimen/dp_100"
+            android:background="@drawable/shape_update"
+            android:gravity="center"
+            android:text="@string/update_stock_info"
+            app:spinning_bar_color="#F00"
+            app:spinning_bar_padding="6dp"
+            app:spinning_bar_width="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_below="@id/info_update"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginStart="@dimen/dp_100"
+            android:layout_marginEnd="@dimen/dp_100"
+            android:gravity="center_vertical|end"
+            android:text="@string/updating_stock_report" />
+
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+            android:id="@+id/report_update"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_below="@id/info_update"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginStart="@dimen/dp_100"
+            android:layout_marginEnd="@dimen/dp_100"
+            android:background="@drawable/shape_update"
+            android:gravity="center"
+            android:text="@string/update_stock_report"
+            app:spinning_bar_color="#F00"
+            app:spinning_bar_padding="6dp"
+            app:spinning_bar_width="4dp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@null"
+            android:gravity="center"
+            android:text="@string/all_update"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/statistics_update"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_below="@id/report_update"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginStart="@dimen/dp_100"
+            android:layout_marginEnd="@dimen/dp_100"
+            android:background="@drawable/shape_update"
+            android:gravity="center"
+            android:text="@string/statistics_button" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_below="@id/statistics_update"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginStart="@dimen/dp_100"
+            android:layout_marginEnd="@dimen/dp_100"
+            android:gravity="center_vertical|end"
+            android:text="@{viewModel.loadIndex}" />
+
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+            android:id="@+id/update_history"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_below="@id/statistics_update"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginStart="@dimen/dp_100"
+            android:layout_marginEnd="@dimen/dp_100"
+            android:background="@drawable/shape_red_update"
+            android:gravity="center"
+            android:text="@string/update_history"
+            android:textColor="@android:color/white"
+            app:spinning_bar_color="#FFF"
+            app:spinning_bar_padding="6dp"
+            app:spinning_bar_width="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_below="@id/update_history"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginStart="@dimen/dp_100"
+            android:layout_marginEnd="@dimen/dp_100"
+            android:gravity="center_vertical|end"
+            android:text="@{viewModel.calculateIndex}" />
+
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+            android:id="@+id/calculate_stock"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_below="@id/update_history"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginStart="@dimen/dp_100"
+            android:layout_marginEnd="@dimen/dp_100"
+            android:background="@drawable/shape_orange_calculate"
+            android:gravity="center"
+            android:text="@string/calculate_stock"
+            android:textColor="@android:color/white"
+            app:spinning_bar_color="#FFF"
+            app:spinning_bar_padding="6dp"
+            app:spinning_bar_width="4dp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_below="@id/title"
+            android:background="@drawable/line_gradient" />
+
+        <ImageView
+            android:id="@+id/game_cover_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/game_cover"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/updating_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:gravity="center"
+            android:text="@string/updating_game_database"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:visibility="gone"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <View
+            android:id="@+id/bottom_horizontal_line_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:alpha="@dimen/bottom_horizontal_bar_alpha"
+            android:background="?attr/colorOnBackgroundMediumContrast" />
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/indeterminate_progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_centerInParent="true"
+            android:visibility="@{viewModel.initData ? View.VISIBLE : View.GONE}" />
+
+    </RelativeLayout>
+</layout>

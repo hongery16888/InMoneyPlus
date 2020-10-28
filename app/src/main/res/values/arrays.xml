@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="stock_status">
+        <item>已购买</item>　　　　　
+        <item>等待中</item>　　　　　
+        <item>挂单中</item>
+        <item>接近中</item>
+        <item>已卖出</item>
+        <item>已达标</item>
+    </string-array>
+</resources>

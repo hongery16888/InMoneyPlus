@@ -1,0 +1,3 @@
+include ':KLineChartLib'
+include ':app'
+rootProject.name = "InMoneyPlus"

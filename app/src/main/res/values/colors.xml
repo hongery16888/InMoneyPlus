@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="white">#ffffff</color>
+
+    <color name="home">#2196F3</color>
+    <color name="find">#673AB7</color>
+    <color name="favorites">#E91E63</color>
+    <color name="review">#FF9800</color>
+    <color name="settings">#4CAF50</color>
+    <color name="search_title">#666666</color>
+    <color name="avatar_border">#666666</color>
+
+    <color name="confirm_text">#FFF</color>
+    <color name="confirm_button">#FF9800</color>
+    <color name="delete_button">#F00</color>
+    <color name="purple">#9c00ff</color>
+
+    <color name="orange">#FF5722</color>
+
+    <color name="pro_order_status">#FFADAD</color>
+    <color name="prompt_buy_status">#C4FAFF</color>
+    <color name="reach_price_status">#EAFFD2</color>
+    <color name="buy_price_status">#F0AFFF</color>
+    <color name="stock_buy_status">#FFFFFF</color>
+
+    <color name="loss_true">#F00</color>
+    <color name="loss_equ">#000</color>
+    <color name="loss_false">#0C770C</color>
+
+    <color name="colorBackground">#F0F0F0</color>
+    <color name="colorBackgroundVariant">#FFFFFF</color>
+    <color name="colorOnBackgroundVeryHighContrast">#666666</color>
+    <color name="colorOnBackgroundHighContrast">#909090</color>
+    <color name="colorOnBackgroundMediumContrast">#AAAAAA</color>
+    <color name="colorOnBackgroundLowContrast">#E0E0E0</color>
+    <color name="colorPlatformChipBackground">#E0E0E0</color>
+    <color name="colorPlatformChipBorder">#AAAAAA</color>
+
+    <color name="example_1_bg">#3A284C</color>
+    <color name="example_1_bg_light">#433254</color>
+    <color name="example_1_white_light">#4DFFFFFF</color>
+    <color name="example_1_white">#D9FFFFFF</color>
+</resources>

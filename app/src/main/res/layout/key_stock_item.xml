@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="date"
+            type="String" />
+        <variable
+            name="max_profit"
+            type="String" />
+        <variable
+            name="max_profit_status"
+            type="Boolean" />
+        <variable
+            name="current_rate"
+            type="Float" />
+        <variable
+            name="current_rate_status"
+            type="Boolean" />
+        <variable
+            name="item"
+            type="com.magic.inmoney.model.KeyStockModel" />
+    </data>
+    <LinearLayout
+        android:id="@+id/stock_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingBottom="@dimen/dp_5"
+            android:gravity="center"
+            android:text="@{date}"/>
+
+        <View
+            android:layout_width="@dimen/px_1"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/dp_5"
+            android:text="@{item.stockCode}" />
+
+        <View
+            android:layout_width="@dimen/px_1"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/dp_5"
+            android:text="@{item.stockName}" />
+
+        <View
+            android:layout_width="@dimen/px_1"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/dp_5"
+            android:textSize="12sp"
+            android:text='@{current_rate + "%"}'
+            android:textColor="@{current_rate_status ?@color/loss_true:@color/loss_false}"/>
+
+        <View
+            android:layout_width="@dimen/px_1"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/dp_5"
+            android:textSize="12sp"
+            android:text="@{max_profit}"
+            android:textColor="@{max_profit_status ?@color/loss_true:@color/loss_false}"/>
+
+        <View
+            android:layout_width="@dimen/px_1"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/buy_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/dp_5"
+            android:text='@{item.buyStatus}' />
+
+    </LinearLayout>
+</layout>

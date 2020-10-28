@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Main Activity -->
+    <dimen name="main_padding">20dp</dimen>
+
+    <dimen name="time_text_size">16sp</dimen>
+    <dimen name="see_all_size">16sp</dimen>
+
+    <dimen name="px_1">1px</dimen>
+    <dimen name="dp_0">0dp</dimen>
+    <dimen name="dp_2">2dp</dimen>
+    <dimen name="dp_3">3dp</dimen>
+    <dimen name="dp_5">5dp</dimen>
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_12">12dp</dimen>
+    <dimen name="dp_15">15dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+    <dimen name="dp_40">40dp</dimen>
+    <dimen name="dp_50">50dp</dimen>
+    <dimen name="dp_80">80dp</dimen>
+    <dimen name="dp_95">95dp</dimen>
+    <dimen name="dp_100">100dp</dimen>
+    <dimen name="dp_120">120dp</dimen>
+    <dimen name="dp_150">150dp</dimen>
+    <dimen name="dp_200">200dp</dimen>
+    <dimen name="dp_250">250dp</dimen>
+    <dimen name="dp_300">300dp</dimen>
+    <dimen name="dp_350">350dp</dimen>
+    <dimen name="dp_400">400dp</dimen>
+    <dimen name="dp_450">450dp</dimen>
+    <dimen name="dp_500">500dp</dimen>
+
+    <dimen name="margin_normal">16dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_extra_small">4dp</dimen>
+    <dimen name="margin_extra_extra_small">2dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+    <dimen name="margin_extra_large">64dp</dimen>
+    <dimen name="margin_12dp">12dp</dimen>
+    <dimen name="corner_radius">4dp</dimen>
+    <dimen name="text_button_size">17sp</dimen>
+    <dimen name="radio_button_height">36dp</dimen>
+    <item name="bottom_horizontal_bar_alpha" format="float" type="dimen">0.4</item>
+
+</resources>

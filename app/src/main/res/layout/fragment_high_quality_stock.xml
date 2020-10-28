@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="com.magic.inmoney.viewmodel.excellent.HighQualityStockViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        tools:context="com.magic.upcoming.games.fragment.GameMainFragment">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center"
+            android:background="@null"
+            android:text="@string/high_quality_stock"
+            android:textSize="20sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@drawable/line_gradient"
+            android:layout_below="@id/title"/>
+
+        <LinearLayout
+            android:id="@+id/tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/title">
+
+            <TextView
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5"
+                android:gravity="center"
+                android:text="Id"/>
+
+            <View
+                android:layout_width="@dimen/px_1"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/stock_code"
+                android:gravity="center"
+                android:padding="@dimen/dp_5"/>
+
+            <View
+                android:layout_width="@dimen/px_1"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/stock_name"
+                android:gravity="center"
+                android:padding="@dimen/dp_5"/>
+
+            <View
+                android:layout_width="@dimen/px_1"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/stock_rate"
+                android:gravity="center"
+                android:padding="@dimen/dp_5"/>
+
+            <View
+                android:layout_width="@dimen/px_1"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/stock_price"
+                android:gravity="center"
+                android:padding="@dimen/dp_5"/>
+
+            <View
+                android:layout_width="@dimen/px_1"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/turnover_rate"
+                android:gravity="center"
+                android:padding="@dimen/dp_5"/>
+
+        </LinearLayout>
+
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:layout_below="@id/tab"
+            android:layout_above="@id/bottom_horizontal_line_view"
+            app:srlAccentColor="@android:color/white"
+            app:srlEnableHeaderTranslationContent="false"
+            app:srlEnableLoadMore="true"
+            app:srlPrimaryColor="@color/colorPrimary">
+
+            <com.scwang.smart.refresh.header.MaterialHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/video_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                android:background="@color/colorBackground"
+                android:overScrollMode="never"/>
+
+            <com.scwang.smart.refresh.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srlAccentColor="#888"
+                app:srlClassicsSpinnerStyle="Translate"
+                app:srlDrawableProgress="@drawable/ic_progress" />
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+        <TextView
+            android:id="@+id/empty_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/empty_list"
+            android:drawablePadding="@dimen/margin_normal"
+            android:text="@string/no_games_match_filter_options"
+            android:visibility="@{viewModel.emptyStatus ? View.VISIBLE : View.GONE}"
+            android:layout_centerInParent="true"/>
+
+        <ImageView
+            android:id="@+id/game_cover_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/game_cover"
+            android:layout_centerInParent="true"
+            android:visibility="visible"/>
+
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/indeterminate_progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_centerInParent="true"
+            android:visibility="@{viewModel.initData ? View.VISIBLE : View.GONE}"/>
+
+        <ProgressBar
+            android:id="@+id/determinate_progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/updating_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:gravity="center"
+            android:text="@string/updating_game_database"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_centerInParent="true"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:visibility="gone"/>
+
+        <View
+            android:id="@+id/bottom_horizontal_line_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:alpha="@dimen/bottom_horizontal_bar_alpha"
+            android:background="?attr/colorOnBackgroundMediumContrast"
+            android:layout_alignParentBottom="true" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@drawable/line_gradient"
+            android:layout_below="@id/tab"/>
+
+        <com.cleveroad.sy.cyclemenuwidget.CycleMenuWidget
+            android:id="@+id/itemCycleMenuWidget"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cm_autoMaxRadius="220dp"
+            app:cm_autoMinRadius="10dp"
+            app:cm_corner="right_top"
+            app:cm_fixedRadius="200dp"
+            app:cm_radius_scale_type="auto"
+            app:cm_scroll_type="endless"
+            app:cm_item_background_tint="#449955"
+            app:cm_corner_image_src="@drawable/cm_ic_plus"
+            app:cm_ripple_color="#009933" />
+
+        <ImageView
+            android:id="@+id/add_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add"
+            android:onClick="onClick"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="@dimen/dp_50"
+            android:layout_marginEnd="@dimen/dp_20"/>
+
+        <CheckBox
+            android:id="@+id/high_quality"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="50dp"
+            android:checked="false"
+            android:background="@drawable/stock_high_quality_selector"
+            android:button="@null"
+            android:layout_above="@id/before_one_day"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_20"/>
+
+        <CheckBox
+            android:id="@+id/before_one_day"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="50dp"
+            android:background="@drawable/stock_check_selector"
+            android:button="@null"
+            android:layout_above="@id/add_favorite"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_20"/>
+
+        <com.magic.inmoney.view.SpecialProgressBarView
+            android:id="@+id/loading_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dp_20"
+            android:visibility="@{viewModel.initData ? View.VISIBLE : View.GONE}"
+            app:startDrawable="@drawable/ic_up_up_up"
+            app:endSuccessDrawable="@drawable/ic_done_white_36dp"
+            app:textSize="18sp"
+            app:textColorSuccess="#66A269"
+            app:textColorNormal="#FF5722"
+            app:textColorError="#BC5246"
+            app:progressBarHeight="4dp"
+            app:progressBarBgColor="#491C14"
+            app:progressBarColor="#FF5722"
+            app:canReBackable="true"
+            app:canDragable="false"/>
+
+    </RelativeLayout>
+</layout>

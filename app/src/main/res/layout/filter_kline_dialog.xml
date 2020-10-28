@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_20">
+
+        <RelativeLayout
+            android:layout_width="650dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/shape_filter_kline"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:id="@+id/stock_type_1"
+                android:layout_width="@dimen/dp_450"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <com.github.zagum.switchicon.SwitchIconView
+                        android:id="@+id/switch_three_cannon"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:padding="8dp"
+                        app:si_animation_duration="500"
+                        app:si_disabled_alpha=".3"
+                        app:si_disabled_color="#000000"
+                        app:si_enabled="true"
+                        app:si_no_dash="false"
+                        app:si_tint_color="#ff3c00"
+                        app:srcCompat="@drawable/ic_3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="两阳夹一阴" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <com.github.zagum.switchicon.SwitchIconView
+                        android:id="@+id/switch_four_cannon"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:padding="8dp"
+                        app:si_animation_duration="500"
+                        app:si_disabled_alpha=".3"
+                        app:si_disabled_color="#000000"
+                        app:si_enabled="false"
+                        app:si_no_dash="false"
+                        app:si_tint_color="#ff3c00"
+                        app:srcCompat="@drawable/ic_4" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="两阳夹两阴" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <com.github.zagum.switchicon.SwitchIconView
+                        android:id="@+id/switch_five_cannon"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:padding="8dp"
+                        app:si_animation_duration="500"
+                        app:si_disabled_alpha=".3"
+                        app:si_disabled_color="#000000"
+                        app:si_enabled="false"
+                        app:si_no_dash="false"
+                        app:si_tint_color="#ff3c00"
+                        app:srcCompat="@drawable/ic_5" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="两阳夹三阴" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <com.github.zagum.switchicon.SwitchIconView
+                        android:id="@+id/switch_pregnant_plus"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:padding="8dp"
+                        app:si_animation_duration="500"
+                        app:si_disabled_alpha=".3"
+                        app:si_disabled_color="#000000"
+                        app:si_enabled="false"
+                        app:si_no_dash="false"
+                        app:si_tint_color="#ff3c00"
+                        app:srcCompat="@drawable/ic_pregnant_plus" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="低位孕线Plus" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/stock_type_2"
+                android:layout_width="@dimen/dp_450"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/stock_type_1"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <com.github.zagum.switchicon.SwitchIconView
+                        android:id="@+id/switch_three_cannon_plus"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:padding="8dp"
+                        app:si_animation_duration="500"
+                        app:si_disabled_alpha=".3"
+                        app:si_disabled_color="#000000"
+                        app:si_enabled="true"
+                        app:si_no_dash="false"
+                        app:si_tint_color="#ff3c00"
+                        app:srcCompat="@drawable/ic_3_plus" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="两阳夹一阴Plus" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <com.github.zagum.switchicon.SwitchIconView
+                        android:id="@+id/switch_three_soldier"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:padding="8dp"
+                        app:si_animation_duration="500"
+                        app:si_disabled_alpha=".3"
+                        app:si_disabled_color="#000000"
+                        app:si_enabled="true"
+                        app:si_no_dash="false"
+                        app:si_tint_color="#ff3c00"
+                        app:srcCompat="@drawable/ic_soldier" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="红三兵" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <com.github.zagum.switchicon.SwitchIconView
+                        android:id="@+id/switch_firend_counter_attack"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:padding="8dp"
+                        app:si_animation_duration="500"
+                        app:si_disabled_alpha=".3"
+                        app:si_disabled_color="#000000"
+                        app:si_enabled="false"
+                        app:si_no_dash="false"
+                        app:si_tint_color="#ff3c00"
+                        app:srcCompat="@drawable/ic_friend" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="好友反攻" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <com.github.zagum.switchicon.SwitchIconView
+                        android:id="@+id/switch_fall_end"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:padding="8dp"
+                        app:si_animation_duration="500"
+                        app:si_disabled_alpha=".3"
+                        app:si_disabled_color="#000000"
+                        app:si_enabled="false"
+                        app:si_no_dash="false"
+                        app:si_tint_color="#ff3c00"
+                        app:srcCompat="@drawable/ic_fall_end" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="下跌尽头线" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/stock_type_3"
+                android:layout_width="@dimen/dp_450"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/stock_type_2"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <com.github.zagum.switchicon.SwitchIconView
+                        android:id="@+id/switch_dawn_flush"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:padding="8dp"
+                        app:si_animation_duration="500"
+                        app:si_disabled_alpha=".3"
+                        app:si_disabled_color="#000000"
+                        app:si_enabled="false"
+                        app:si_no_dash="false"
+                        app:si_tint_color="#ff3c00"
+                        app:srcCompat="@drawable/ic_dawnflush" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="早晨之星" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <com.github.zagum.switchicon.SwitchIconView
+                        android:id="@+id/switch_cross_star"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:padding="8dp"
+                        app:si_animation_duration="500"
+                        app:si_disabled_alpha=".3"
+                        app:si_disabled_color="#000000"
+                        app:si_enabled="false"
+                        app:si_no_dash="false"
+                        app:si_tint_color="#ff3c00"
+                        app:srcCompat="@drawable/ic_cross_star" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="启明之星" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <com.github.zagum.switchicon.SwitchIconView
+                        android:id="@+id/switch_up_hammer"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:padding="8dp"
+                        app:si_animation_duration="500"
+                        app:si_disabled_alpha=".3"
+                        app:si_disabled_color="#000000"
+                        app:si_enabled="false"
+                        app:si_no_dash="false"
+                        app:si_tint_color="#ff3c00"
+                        app:srcCompat="@drawable/ic_up_hammer" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="锤子线" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <com.github.zagum.switchicon.SwitchIconView
+                        android:id="@+id/switch_down_hammer"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:padding="8dp"
+                        app:si_animation_duration="500"
+                        app:si_disabled_alpha=".3"
+                        app:si_disabled_color="#000000"
+                        app:si_enabled="false"
+                        app:si_no_dash="false"
+                        app:si_tint_color="#ff3c00"
+                        app:srcCompat="@drawable/ic_down_hammer" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="倒锤子线" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/stock_type_4"
+                android:layout_width="@dimen/dp_450"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/stock_type_3"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <com.github.zagum.switchicon.SwitchIconView
+                        android:id="@+id/switch_engulf"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:padding="8dp"
+                        app:si_animation_duration="500"
+                        app:si_disabled_alpha=".3"
+                        app:si_disabled_color="#000000"
+                        app:si_enabled="false"
+                        app:si_no_dash="false"
+                        app:si_tint_color="#ff3c00"
+                        app:srcCompat="@drawable/ic_engulf" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="看涨吞没" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <com.github.zagum.switchicon.SwitchIconView
+                        android:id="@+id/switch_flat_bottom"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:padding="8dp"
+                        app:si_animation_duration="500"
+                        app:si_disabled_alpha=".3"
+                        app:si_disabled_color="#000000"
+                        app:si_enabled="false"
+                        app:si_no_dash="false"
+                        app:si_tint_color="#ff3c00"
+                        app:srcCompat="@drawable/ic_flat_bottom" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="平头底部" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <com.github.zagum.switchicon.SwitchIconView
+                        android:id="@+id/switch_pregnant"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:padding="8dp"
+                        app:si_animation_duration="500"
+                        app:si_disabled_alpha=".3"
+                        app:si_disabled_color="#000000"
+                        app:si_enabled="false"
+                        app:si_no_dash="false"
+                        app:si_tint_color="#ff3c00"
+                        app:srcCompat="@drawable/ic_pregnant" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="低位孕线" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <com.github.zagum.switchicon.SwitchIconView
+                        android:id="@+id/debug"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:padding="8dp"
+                        app:si_animation_duration="500"
+                        app:si_disabled_alpha=".3"
+                        app:si_disabled_color="#000000"
+                        app:si_enabled="false"
+                        app:si_no_dash="false"
+                        app:si_tint_color="#ff3c00"
+                        app:srcCompat="@drawable/ic_kc" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="测试股" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/reset_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_50"
+                    android:background="@drawable/shape_update"
+                    android:paddingStart="@dimen/dp_20"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingEnd="@dimen/dp_20"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:text="重置K线类型" />
+
+                <TextView
+                    android:id="@+id/confirm_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_50"
+                    android:layout_marginEnd="@dimen/dp_50"
+                    android:background="@drawable/shape_update"
+                    android:paddingStart="@dimen/dp_20"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingEnd="@dimen/dp_20"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:text="确定K线类型" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

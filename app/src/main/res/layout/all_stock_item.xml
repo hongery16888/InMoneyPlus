@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="position"
+            type="String" />
+        <variable
+            name="item"
+            type="com.magic.inmoney.model.StockItemTodayModel" />
+    </data>
+    <LinearLayout
+        android:id="@+id/stock_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingBottom="@dimen/dp_5"
+            android:gravity="center"
+            android:text="@{position}"/>
+
+        <View
+            android:layout_width="@dimen/px_1"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/dp_5"
+            android:text="@{item.stockCode}" />
+
+        <View
+            android:layout_width="@dimen/px_1"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/dp_5"
+            android:text="@{item.stockName}" />
+
+        <View
+            android:layout_width="@dimen/px_1"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/dp_5"
+            android:text='@{item.stockRate + "%"}'
+            android:textColor="@{item.loss?@color/loss_false:@color/loss_true}"/>
+
+        <View
+            android:layout_width="@dimen/px_1"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/dp_5"
+            android:text="@{item.stockPrice}" />
+
+        <View
+            android:layout_width="@dimen/px_1"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/dp_5"
+            android:text='@{item.turnoverRate + "%"}' />
+
+    </LinearLayout>
+</layout>

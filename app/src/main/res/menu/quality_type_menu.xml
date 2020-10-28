@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/three_cannon"
+        android:icon="@drawable/ic_3"
+        tools:ignore="MenuTitle"/>
+    <item
+        android:id="@+id/four_cannon"
+        android:icon="@drawable/ic_4"
+        tools:ignore="MenuTitle"/>
+
+    <item
+        android:id="@+id/five_cannon"
+        android:icon="@drawable/ic_5"
+        tools:ignore="MenuTitle"/>
+
+    <item
+        android:id="@+id/three_soldier"
+        android:icon="@drawable/ic_soldier"
+        tools:ignore="MenuTitle"/>
+
+    <item
+        android:id="@+id/friend_counterattack"
+        android:icon="@drawable/ic_friend"
+        tools:ignore="MenuTitle"/>
+
+    <item
+        android:id="@+id/dawn_flush"
+        android:icon="@drawable/ic_dawnflush"
+        tools:ignore="MenuTitle"/>
+
+    <item
+        android:id="@+id/three_cannon_plus"
+        android:icon="@drawable/ic_3_plus"
+        tools:ignore="MenuTitle"/>
+
+    <item
+        android:id="@+id/cross_star"
+        android:icon="@drawable/ic_cross_star"
+        tools:ignore="MenuTitle"/>
+
+    <item
+        android:id="@+id/up_hammer"
+        android:icon="@drawable/ic_up_hammer"
+        tools:ignore="MenuTitle"/>
+
+    <item
+        android:id="@+id/engulf"
+        android:icon="@drawable/ic_engulf"
+        tools:ignore="MenuTitle"/>
+
+    <item
+        android:id="@+id/flat_bottom"
+        android:icon="@drawable/ic_flat_bottom"
+        tools:ignore="MenuTitle"/>
+
+    <item
+        android:id="@+id/pregnant"
+        android:icon="@drawable/ic_pregnant"
+        tools:ignore="MenuTitle"/>
+
+    <item
+        android:id="@+id/pregnant_plus"
+        android:icon="@drawable/ic_pregnant_plus"
+        tools:ignore="MenuTitle"/>
+
+    <item
+        android:id="@+id/fall_end"
+        android:icon="@drawable/ic_fall_end"
+        tools:ignore="MenuTitle"/>
+
+    <item
+        android:id="@+id/double_needle"
+        android:icon="@drawable/ic_double_needle"
+        tools:ignore="MenuTitle"/>
+
+    <item
+        android:id="@+id/high_trade"
+        android:icon="@drawable/ic_high_trade"
+        tools:ignore="MenuTitle"/>
+
+    <item
+        android:id="@+id/debug"
+        android:icon="@drawable/ic_debug"
+        tools:ignore="MenuTitle"/>
+
+    <item
+        android:id="@+id/resonate"
+        android:icon="@drawable/ic_resonate"
+        tools:ignore="MenuTitle"/>
+
+<!--    <item-->
+<!--        android:id="@+id/rising_sun"-->
+<!--        android:icon="@drawable/ic_sunshine"-->
+<!--        android:visible="false"-->
+<!--        tools:ignore="MenuTitle"/>-->
+
+</menu>

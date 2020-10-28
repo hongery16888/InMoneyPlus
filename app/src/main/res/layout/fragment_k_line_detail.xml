@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="stockCode"
+            type="String" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        tools:context="com.magic.upcoming.games.fragment.GameMainFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/min_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="@string/min_kline"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/min_kline_image"
+                    imageUrl="@{stockCode}"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_250"
+                    android:layout_below="@id/min_title"/>
+
+                <TextView
+                    android:id="@+id/daily_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:background="@null"
+                    android:layout_below="@id/min_kline_image"
+                    android:gravity="center"
+                    android:text="@string/daily_kline"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/daily_kline_image"
+                    imageUrl="@{stockCode}"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_250"
+                    android:layout_below="@id/daily_title"/>
+
+                <TextView
+                    android:id="@+id/weekly_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:background="@null"
+                    android:layout_below="@id/daily_kline_image"
+                    android:gravity="center"
+                    android:text="@string/weekly_kline"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/weekly_kline_image"
+                    imageUrl="@{stockCode}"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_250"
+                    android:layout_below="@id/weekly_title"/>
+
+                <TextView
+                    android:id="@+id/month_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:background="@null"
+                    android:layout_below="@id/weekly_kline_image"
+                    android:gravity="center"
+                    android:text="@string/month_kline"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/month_kline_image"
+                    imageUrl="@{stockCode}"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_250"
+                    android:layout_below="@id/month_title"/>
+            </RelativeLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</layout>

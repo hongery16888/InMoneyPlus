@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="success_rate"
+            type="String" />
+        <variable
+            name="success_close_profit"
+            type="String" />
+        <variable
+            name="failure_close_profit"
+            type="String" />
+        <variable
+            name="profit_rate"
+            type="String" />
+        <variable
+            name="item"
+            type="com.magic.inmoney.model.StatisticsModel" />
+    </data>
+    <LinearLayout
+        android:id="@+id/stock_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingBottom="@dimen/dp_5"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:text="@{item.stockName}"/>
+
+        <View
+            android:layout_width="@dimen/px_1"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/dp_5"
+            android:textSize="12sp"
+            android:text='@{item.keyCount + ""}' />
+
+        <View
+            android:layout_width="@dimen/px_1"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/dp_5"
+            android:textSize="12sp"
+            android:text='@{item.successHighCount + ""}' />
+
+        <View
+            android:layout_width="@dimen/px_1"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/dp_5"
+            android:textSize="12sp"
+            android:text='@{item.failureHighCount + ""}'/>
+
+        <View
+            android:layout_width="@dimen/px_1"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/dp_5"
+            android:textSize="10sp"
+            android:text="@{success_close_profit}" />
+
+        <View
+            android:layout_width="@dimen/px_1"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/dp_5"
+            android:textSize="10sp"
+            android:text="@{failure_close_profit}" />
+
+        <View
+            android:layout_width="@dimen/px_1"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/dp_5"
+            android:textSize="12sp"
+            android:text="@{profit_rate}" />
+
+        <View
+            android:layout_width="@dimen/px_1"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/dp_5"
+            android:textSize="10sp"
+            android:text="@{success_rate}" />
+
+    </LinearLayout>
+</layout>

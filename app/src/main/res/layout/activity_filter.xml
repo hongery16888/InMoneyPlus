@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.magic.inmoney.viewmodel.filter.FilterViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@null"
+            android:gravity="center"
+            android:text="@string/filter_detail"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/up_navigation_imageButton"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/nav_app_bar_navigate_up_description"
+            android:src="@drawable/ic_left_arrow"
+            android:tint="?attr/colorOnBackground" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/title"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/stock_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/stock_type"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText" />
+
+                <LinearLayout
+                    android:id="@+id/stock_type_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/stock_type"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        tools:ignore="UselessParent">
+
+                        <com.github.zagum.switchicon.SwitchIconView
+                            android:id="@+id/switch_sh_a"
+                            android:layout_width="@dimen/dp_50"
+                            android:layout_height="@dimen/dp_50"
+                            android:padding="8dp"
+                            app:si_animation_duration="500"
+                            app:si_disabled_alpha=".3"
+                            app:si_disabled_color="#000000"
+                            app:si_enabled="true"
+                            app:si_no_dash="false"
+                            app:si_tint_color="#ff3c00"
+                            app:srcCompat="@drawable/ic_sh_a" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/stock_sh_a" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        tools:ignore="UselessParent">
+
+                        <com.github.zagum.switchicon.SwitchIconView
+                            android:id="@+id/switch_sh_b"
+                            android:layout_width="@dimen/dp_50"
+                            android:layout_height="@dimen/dp_50"
+                            android:padding="8dp"
+                            app:si_animation_duration="500"
+                            app:si_disabled_alpha=".3"
+                            app:si_disabled_color="#000000"
+                            app:si_enabled="false"
+                            app:si_no_dash="false"
+                            app:si_tint_color="#ff3c00"
+                            app:srcCompat="@drawable/ic_sh_b" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/stock_sh_b" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        tools:ignore="UselessParent">
+
+                        <com.github.zagum.switchicon.SwitchIconView
+                            android:id="@+id/switch_cyb"
+                            android:layout_width="@dimen/dp_50"
+                            android:layout_height="@dimen/dp_50"
+                            android:padding="8dp"
+                            app:si_animation_duration="500"
+                            app:si_disabled_alpha=".3"
+                            app:si_disabled_color="#000000"
+                            app:si_enabled="false"
+                            app:si_no_dash="false"
+                            app:si_tint_color="#ff3c00"
+                            app:srcCompat="@drawable/ic_cy" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/stock_cy" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        tools:ignore="UselessParent">
+
+                        <com.github.zagum.switchicon.SwitchIconView
+                            android:id="@+id/switch_kcb"
+                            android:layout_width="@dimen/dp_50"
+                            android:layout_height="@dimen/dp_50"
+                            android:padding="8dp"
+                            app:si_animation_duration="500"
+                            app:si_disabled_alpha=".3"
+                            app:si_disabled_color="#000000"
+                            app:si_enabled="false"
+                            app:si_no_dash="false"
+                            app:si_tint_color="#ff3c00"
+                            app:srcCompat="@drawable/ic_kc" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/stock_kc" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/stock_type_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/stock_type_1"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        tools:ignore="UselessParent">
+
+                        <com.github.zagum.switchicon.SwitchIconView
+                            android:id="@+id/switch_sz_a"
+                            android:layout_width="@dimen/dp_50"
+                            android:layout_height="@dimen/dp_50"
+                            android:padding="8dp"
+                            app:si_animation_duration="500"
+                            app:si_disabled_alpha=".3"
+                            app:si_disabled_color="#000000"
+                            app:si_enabled="true"
+                            app:si_no_dash="false"
+                            app:si_tint_color="#ff3c00"
+                            app:srcCompat="@drawable/ic_sz_a" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/stock_sz" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        tools:ignore="UselessParent">
+
+                        <com.github.zagum.switchicon.SwitchIconView
+                            android:id="@+id/switch_zxb"
+                            android:layout_width="@dimen/dp_50"
+                            android:layout_height="@dimen/dp_50"
+                            android:padding="8dp"
+                            app:si_animation_duration="500"
+                            app:si_disabled_alpha=".3"
+                            app:si_disabled_color="#000000"
+                            app:si_enabled="true"
+                            app:si_no_dash="false"
+                            app:si_tint_color="#ff3c00"
+                            app:srcCompat="@drawable/ic_zxb" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/stock_zxb" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        tools:ignore="UselessParent">
+
+                        <com.github.zagum.switchicon.SwitchIconView
+                            android:id="@+id/switch_sz_b"
+                            android:layout_width="@dimen/dp_50"
+                            android:layout_height="@dimen/dp_50"
+                            android:padding="8dp"
+                            app:si_animation_duration="500"
+                            app:si_disabled_alpha=".3"
+                            app:si_disabled_color="#000000"
+                            app:si_enabled="false"
+                            app:si_no_dash="false"
+                            app:si_tint_color="#ff3c00"
+                            app:srcCompat="@drawable/ic_sz_b" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/stock_sz_b" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:visibility="invisible"
+                        tools:ignore="UselessParent">
+
+                        <com.github.zagum.switchicon.SwitchIconView
+                            android:layout_width="@dimen/dp_50"
+                            android:layout_height="@dimen/dp_50"
+                            android:padding="8dp"
+                            app:si_animation_duration="500"
+                            app:si_disabled_alpha=".3"
+                            app:si_disabled_color="#b7b7b7"
+                            app:si_enabled="true"
+                            app:si_no_dash="false"
+                            app:si_tint_color="#ff3c00"
+                            app:srcCompat="@drawable/ic_cy" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="沪市A股" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/stock_diff_rate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/stock_type_2"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/stock_diff_rate"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/stock_diff_rate"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:gravity="center"
+                    android:text="(                          )"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:id="@+id/rate_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/stock_diff_rate"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/diff_rate_start"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|end"
+                        android:text="-10% "
+                        android:textColor="#F00"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" ~ " />
+
+                    <TextView
+                        android:id="@+id/diff_rate_end"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="10%"
+                        android:textColor="#F00"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <com.jem.rubberpicker.RubberRangePicker
+                    android:id="@+id/diff_rate_range"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rate_lay"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    app:dampingRatio="0.4"
+                    app:defaultThumbInsideColor="#CFCD5D67"
+                    app:defaultThumbRadius="13dp"
+                    app:elasticBehavior="linear"
+                    app:highlightDefaultThumbOnTouchColor="#CD5D67"
+                    app:highlightTrackColor="#ff3c00"
+                    app:highlightTrackWidth="8dp"
+                    app:maxValue="11"
+                    app:minValue="-11"
+                    app:normalTrackColor="#AAAAAA"
+                    app:normalTrackWidth="2dp"
+                    app:stiffness="400"
+                    app:stretchRange="36dp" />
+
+                <LinearLayout
+                    android:id="@+id/radio_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/diff_rate_range">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/sort_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:padding="@dimen/dp_10"
+                            android:text="@string/stock_sort"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:id="@+id/sort_type_radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/sort_type"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:orientation="vertical">
+
+                            <RadioGroup
+                                sortType="@={viewModel.sortType}"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RadioButton
+                                    android:id="@+id/sort_stock_code"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/radio_button_height"
+                                    android:text="@string/stock_code"
+                                    android:textColor="#676767"
+                                    android:textSize="16sp" />
+
+                                <RadioButton
+                                    android:id="@+id/sort_stock_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/radio_button_height"
+                                    android:text="@string/stock_name"
+                                    android:textColor="#676767"
+                                    android:textSize="16sp" />
+
+                                <RadioButton
+                                    android:id="@+id/sort_stock_rate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/radio_button_height"
+                                    android:text="@string/stock_rate"
+                                    android:textColor="#676767"
+                                    android:textSize="16sp" />
+
+                                <RadioButton
+                                    android:id="@+id/sort_trade_num"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/radio_button_height"
+                                    android:text="@string/trade_num"
+                                    android:textColor="#676767"
+                                    android:textSize="16sp" />
+
+                                <RadioButton
+                                    android:id="@+id/sort_turnover_rate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/radio_button_height"
+                                    android:text="@string/turnover_rate"
+                                    android:textColor="#676767"
+                                    android:textSize="16sp" />
+
+                            </RadioGroup>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/sort_direction"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:padding="@dimen/dp_10"
+                            android:text="升降序"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:id="@+id/sort_direction_radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/sort_direction"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:orientation="vertical">
+
+                            <RadioGroup
+                                sortDirection="@={viewModel.sortDirection}"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RadioButton
+                                    android:id="@+id/sort_desc_radio"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/radio_button_height"
+                                    android:text="@string/sort_desc"
+                                    android:textColor="#676767"
+                                    android:textSize="16sp" />
+
+                                <RadioButton
+                                    android:id="@+id/sort_asc_radio"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/radio_button_height"
+                                    android:text="@string/sort_asc"
+                                    android:textColor="#676767"
+                                    android:textSize="16sp" />
+
+                            </RadioGroup>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/before_days"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/radio_container"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:padding="@dimen/dp_10"
+                    android:text="往前筛选天数"
+                    android:textSize="18sp" />
+
+                <com.jem.rubberpicker.RubberSeekBar
+                    android:id="@+id/before_days_seek_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/before_days"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    app:dampingRatio="0.3"
+                    app:defaultThumbInsideColor="#FFF"
+                    app:defaultThumbRadius="13dp"
+                    app:elasticBehavior="cubic"
+                    app:highlightDefaultThumbOnTouchColor="#CD5D67"
+                    app:highlightTrackColor="#ff3c00"
+                    app:highlightTrackWidth="8dp"
+                    app:maxValue="10"
+                    app:minValue="1"
+                    app:normalTrackColor="#AAAAAA"
+                    app:normalTrackWidth="2dp"
+                    app:stiffness="300"
+                    app:stretchRange="14dp" />
+
+                <RelativeLayout
+                    android:id="@+id/buy_prompt_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/before_days_seek_bar">
+
+                    <TextView
+                        android:id="@+id/key_stock_prompt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:padding="@dimen/dp_10"
+                        android:text="重点打击提醒方式"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:id="@+id/key_stock_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/key_stock_prompt"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:orientation="horizontal">
+
+                        <RadioGroup
+                            promptType="@={viewModel.promptType}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/voice_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/radio_button_height"
+                                android:layout_marginEnd="20dp"
+                                android:text="@string/voice_type"
+                                android:textColor="#676767"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/music_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/radio_button_height"
+                                android:layout_marginEnd="20dp"
+                                android:text="@string/music_type"
+                                android:textColor="#676767"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/none_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/radio_button_height"
+                                android:text="@string/none_type"
+                                android:textColor="#676767"
+                                android:textSize="16sp" />
+
+                        </RadioGroup>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/buy_point_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/buy_prompt_type">
+
+                    <TextView
+                        android:id="@+id/buy_point_prompt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:padding="@dimen/dp_10"
+                        android:text="买点提醒位置"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:id="@+id/buy_point_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/buy_point_prompt"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:orientation="horizontal">
+
+                        <RadioGroup
+                            buyPoint="@={viewModel.buyPoint}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/up_line_point"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/radio_button_height"
+                                android:layout_marginEnd="20dp"
+                                android:text="上均线"
+                                android:textColor="#676767"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/mid_line_point"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/radio_button_height"
+                                android:layout_marginEnd="20dp"
+                                android:text="中均线"
+                                android:textColor="#676767"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/down_line_point"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/radio_button_height"
+                                android:text="下均线"
+                                android:layout_marginEnd="20dp"
+                                android:textColor="#676767"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/any_line_point"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/radio_button_height"
+                                android:text="任意线"
+                                android:textColor="#676767"
+                                android:textSize="16sp" />
+
+                        </RadioGroup>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/through_type_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/buy_point_lay">
+
+                    <TextView
+                        android:id="@+id/through_type_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:padding="@dimen/dp_10"
+                        android:text="放量线穿透类型"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:id="@+id/through_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/through_type_title"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:orientation="horizontal">
+
+                        <RadioGroup
+                            throughType="@={viewModel.throughType}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/normal_through"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/radio_button_height"
+                                android:layout_marginEnd="5dp"
+                                android:text="穿透"
+                                android:textColor="#676767"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/high_through"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/radio_button_height"
+                                android:layout_marginEnd="5dp"
+                                android:text="高穿透"
+                                android:textColor="#676767"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/through_trade"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/radio_button_height"
+                                android:text="高量穿透"
+                                android:layout_marginEnd="5dp"
+                                android:textColor="#676767"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/high_through_trade"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/radio_button_height"
+                                android:text="高量高穿透"
+                                android:textColor="#676767"
+                                android:textSize="16sp" />
+
+                        </RadioGroup>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/return_high_point_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/through_type_lay"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:padding="@dimen/dp_10"
+                    android:text="五日量比"
+                    android:textSize="18sp" />
+
+                <com.jem.rubberpicker.RubberRangePicker
+                    android:id="@+id/volume_rate_picker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/return_high_point_title"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    app:dampingRatio="0.4"
+                    app:defaultThumbInsideColor="#CFCD5D67"
+                    app:defaultThumbRadius="13dp"
+                    app:elasticBehavior="linear"
+                    app:highlightDefaultThumbOnTouchColor="#CD5D67"
+                    app:highlightTrackColor="#ff3c00"
+                    app:highlightTrackWidth="8dp"
+                    app:maxValue="50"
+                    app:minValue="0"
+                    app:normalTrackColor="#AAAAAA"
+                    app:normalTrackWidth="2dp"
+                    app:stiffness="400"
+                    app:stretchRange="36dp" />
+
+                <TextView
+                    android:id="@+id/turnover_rate_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/volume_rate_picker"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:padding="@dimen/dp_10"
+                    android:text="五日量比"
+                    android:textSize="18sp" />
+
+                <com.jem.rubberpicker.RubberRangePicker
+                    android:id="@+id/turnover_rate_picker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/turnover_rate_title"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    app:dampingRatio="0.4"
+                    app:defaultThumbInsideColor="#CFCD5D67"
+                    app:defaultThumbRadius="13dp"
+                    app:elasticBehavior="linear"
+                    app:highlightDefaultThumbOnTouchColor="#CD5D67"
+                    app:highlightTrackColor="#ff3c00"
+                    app:highlightTrackWidth="8dp"
+                    app:maxValue="100"
+                    app:minValue="0"
+                    app:normalTrackColor="#AAAAAA"
+                    app:normalTrackWidth="2dp"
+                    app:stiffness="400"
+                    app:stretchRange="36dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/turnover_rate_picker"
+                    android:padding="@dimen/dp_5"
+                    android:layout_marginTop="@dimen/dp_5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/dp_5"
+                        android:text="开启趋势提醒："
+                        android:textSize="18sp"/>
+
+                    <com.rm.rmswitch.RMSwitch
+                        android:id="@+id/need_prompt"
+                        android:layout_width="@dimen/dp_120"
+                        android:layout_height="@dimen/dp_30"
+                        app:checked="@{viewModel.needTrend}"
+                        app:forceAspectRatio="false"
+                        app:enabled="true"
+                        app:switchDesign="android"
+                        app:switchBkgCheckedColor="@color/green"
+                        app:switchBkgNotCheckedColor="@color/red"
+                        app:switchToggleCheckedColor="@color/orange"
+                        app:switchToggleCheckedImage="@drawable/ic_open"
+                        app:switchToggleNotCheckedColor="@color/black"
+                        app:switchToggleNotCheckedImage="@drawable/ic_colse"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</layout>
